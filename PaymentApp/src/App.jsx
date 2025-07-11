@@ -8,6 +8,7 @@ import Contact from './Componants/Contact/Contact';
 import Footer from './Componants/Footer/Footer';
 import Signup from './Componants/SignUp/SignUp';
 import Login from './Componants/LogIn/LogIn';
+import Dashboard from './Componants/Dashbord/Dashboard';
 
 // Define a Home component for homepage content
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <Hero />
       <div className="container">
         <About />
+        <Dashboard/>
         <Title subTitle="Contact Us" title="Get In Touch" />
         <Contact />
       </div>

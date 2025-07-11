@@ -1,8 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const verifyToken = require('../middleware/authMiddleware');
-const { getAllCustomers } = require('../controllers/customerController');
+const {
+  getAllCustomers,
+  getCustomerByAccountNumber,
+  createCustomer
+} = require('../controllers/customerController');
 
-router.get('/', verifyToken, getAllCustomers);
+const { auth, adminAuth } = require('../middleware/authMiddleware');
+
+// Routes with proper middleware
+router.get('/', auth, adminAuth, getAllCustomers);                     // Admin: View all customers
+router.get('/:accountNumber', auth, getCustomerByAccountNumber);      // Authenticated user: View own loan
+router.post('/', auth, adminAuth, createCustomer);                    // Admin: Create customer
 
 module.exports = router;

@@ -28,7 +28,8 @@ const Navbar = () => {
 
       <ul className={mobileMenu ? 'mobile-menu-visible' : 'hide-mobile-menu'}>
         <li><ScrollLink to="hero" smooth={true} offset={0} duration={500}>HOME</ScrollLink></li>
-        <li><ScrollLink to="about" smooth={true} offset={-140} duration={500}>ABOUT US</ScrollLink></li>
+        <li><ScrollLink to="about" smooth={true} offset={-160} duration={500}>ABOUT US</ScrollLink></li>
+        <li><ScrollLink to="dashboard-container" smooth={true} offset={-110} duration={500}>DASHBOARD</ScrollLink></li>
         <li><ScrollLink to="contact" smooth={true} offset={-230} duration={500}>CONTACT US</ScrollLink></li>
         <li><RouterLink to="/login" className="btn">LOG IN</RouterLink></li>
         <li><RouterLink to="/signup" className="btn">SIGN UP</RouterLink></li>

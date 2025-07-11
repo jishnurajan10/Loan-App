@@ -1,0 +1,208 @@
+/* src/Components/Dashboard/Dashboard.css */
+
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #eef2f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+  width: 240px;
+  background: linear-gradient(to bottom, #2c3e50, #34495e);
+  color: #ecf0f1;
+  padding: 25px;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 18px;
+}
+
+.sidebar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.dashboard-container {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 0 16px 16px 0;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 34px;
+  color: #2c3e50;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 25px 30px;
+  border-radius: 14px;
+  background-color: #fefefe;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+/* === Enhanced Profile Section === */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background: #f3f6f9;
+  border-left: 5px solid #3498db;
+  border-radius: 12px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-details p {
+  margin: 6px 0;
+  font-size: 17px;
+  color: #2c3e50;
+  line-height: 1.4;
+}
+
+.profile-details p strong {
+  width: 120px;
+  display: inline-block;
+  color: #555;
+}
+
+/* === Loan Form === */
+.loan-form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loan-form-section input,
+.loan-form-section select {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+
+.loan-form-section input:focus,
+.loan-form-section select:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.1);
+}
+
+.loan-form-section button {
+  background-color: #2980b9;
+  color: white;
+  padding: 14px;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loan-form-section button:hover {
+  background-color: #1f6391;
+}
+
+/* === Approved Loan Details === */
+.approved-loan-section p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.approved-loan-section p strong {
+  color: #2c3e50;
+  width: 140px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .dashboard-container {
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-avatar {
+    margin-bottom: 10px;
+  }
+}

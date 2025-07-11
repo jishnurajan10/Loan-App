@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const verifyToken = require('../middleware/authMiddleware');
 const { makePayment, getPaymentsByAccount } = require('../controllers/paymentController');
+const { auth } = require('../middleware/authMiddleware');
 
-router.post('/', verifyToken, makePayment);
-router.get('/:account_number', verifyToken, getPaymentsByAccount);
+router.post('/', auth, makePayment);
+router.get('/:account_number', auth, getPaymentsByAccount);
 
 module.exports = router;
