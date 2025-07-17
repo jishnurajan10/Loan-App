@@ -4,9 +4,9 @@ import './Dashboard.css';
 
 const Dashboard = () => {
   const [profile] = useState({
-    name: 'Jane Doe',
-    email: 'jane@example.com',
-    mobile: '+91 9876543210'
+    name: 'Jishnu',
+    email: 'jishnurajan@example.com',
+    mobile: '+91 987652346'
   });
 
   const [loan, setLoan] = useState({
@@ -97,12 +97,6 @@ const Dashboard = () => {
               <option value="Car Loan">Car Loan</option>
               <option value="Personal Loan">Personal Loan</option>
             </select>
-            {/* <select name="status" value={loan.status} onChange={handleChange} required>
-              <option value="">Select Status</option>
-              <option value="Pending">Pending</option>
-              <option value="Approved">Approved</option>
-              <option value="Rejected">Rejected</option>
-            </select> */}
             <button type="submit">Submit Application</button>
           </form>
         </section>

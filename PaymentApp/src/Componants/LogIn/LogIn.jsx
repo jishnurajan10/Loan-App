@@ -6,7 +6,7 @@ import './Login.css';
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
   const [loginSuccess, setLoginSuccess] = useState(false);
-  const navigate = useNavigate(); // ⬅️ React Router hook
+  const navigate = useNavigate(); //React Router hook
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -24,7 +24,7 @@ const Login = () => {
 
     // Redirect to home after short delay
     setTimeout(() => {
-      navigate('/'); // ⬅️ Redirect to home
+      navigate('/'); //Redirect to home
     }, 1500);
   };
 
